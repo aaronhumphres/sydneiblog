@@ -18,7 +18,7 @@ A blog to share Sydnei's love of exploring, while juggling being a full-time stu
 ### Technologies Used
 
 - Django
-- React
+- Python
 - HTML5
 - CSS
 - Node
