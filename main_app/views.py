@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .forms import CommentForm
+from django.shortcuts import render
+
 from blog.models import Post
 
 
@@ -13,21 +13,5 @@ def homepage(request):
 def about(request):
     return render(request, 'main/about.html')
 
-def detail(request, slug):
-    post = Post.objects.get(slug=slug)
 
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.save()
-
-            return redirect('detail', slug=post.slug)
-    else:
-        form = CommentForm()
-
-
-    return render(request, 'main/detail.html', {'post': post, 'form': form,})
    
