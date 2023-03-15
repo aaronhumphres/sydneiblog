@@ -27,6 +27,8 @@ urlpatterns = [
     path('trails/', trails, name='trails'),
     path('', include('blog.urls')),
     path('', homepage, name='homepage'),
+    path('members/', include('django.contrib.auth.urls')),
+    path('', include('members.urls')),
    
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
