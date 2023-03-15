@@ -17,13 +17,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from main_app.views import homepage, about
+from main_app.views import homepage, about, trails
 
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('about/', about, name='about'), 
+    path('trails/', trails, name='trails'),
     path('', include('blog.urls')),
     path('', homepage, name='homepage'),
    

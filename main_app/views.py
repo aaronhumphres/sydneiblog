@@ -13,5 +13,8 @@ def homepage(request):
 def about(request):
     return render(request, 'main/about.html')
 
+def trails(request):
+    return render(request, 'main/trails.html')
+
 
    
