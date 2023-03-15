@@ -29,7 +29,7 @@
                                     <a href="{% url 'post_detail' post.category.slug post.slug %}">
                                         {% if post.image %}
                                         <figure class="image">
-                                            <img src="{{ post.image.url }}">
+                                            <img src="{{ post.image.url }}" alt="any">
                                         </figure>
                                         {% endif %}
                                         <h2 class="subtitle is-4">{{ post.created_at|timesince }} ago</h2>
