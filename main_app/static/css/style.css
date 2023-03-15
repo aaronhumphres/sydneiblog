@@ -1,3 +1,7 @@
+* {
+    background-color: rgb(211, 160, 83)
+}
+
 body {
     display: flex;
     min-height: 100vh;
