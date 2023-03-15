@@ -13,7 +13,7 @@ class Category(models.Model):
         return self.title
 
 class Post(models.Model):
-    category = models.ForeignKey(Category, name='posts', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     title = models.CharField(max_length = 255)
     slug = models.SlugField()
     intro = models.TextField()
@@ -32,3 +32,5 @@ class Comment(models.Model):
     name = models.CharField(max_length=255)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    
